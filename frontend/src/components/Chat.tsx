@@ -107,60 +107,6 @@ export const Chat: React.FC = () => {
         }
     };
 
-    // const handleSendMessage = async (message: string) => {
-    //     if (!threadId) {
-    //         setError('Chat not initialized. Please refresh the page.');
-    //         return;
-    //     }
-
-    //     setIsLoading(true);
-    //     setError(null);
-    //     setMessages(prev => [...prev, { role: 'user', content: message }]);
-        
-    //     try {
-    //         const response = await sendMessage(threadId, message, selectedBreed);
-    //         if (response.messages) {
-    //             const newMessages = response.messages.map(msg => ({
-    //                 ...msg,
-    //                 breedContext: selectedBreed
-    //             }));
-    //             setMessages(prev => [...prev, ...newMessages]);
-    //         }
-    //     } catch (error) {
-    //         setError('Failed to send message. Please try again.');
-    //         console.error('Message error:', error);
-    //     } finally {
-    //         setIsLoading(false);
-    //     }
-    // };
-
-    // const handleBreedSelect = async (breedId: string) => {
-    //     setSelectedBreed(breedId);
-    //     if (breedId && threadId) {
-    //         setIsLoading(true);
-    //         try {
-    //             // Send a message to get cat images when breed is selected
-    //             const response = await sendMessage(
-    //                 threadId,
-    //                 `Show me at least 2 ${breeds.find(b => b.id === breedId)?.name || ''} cats`,
-    //                 breedId
-    //             );
-    //             if (response.messages) {
-    //                 const newMessages = response.messages.map(msg => ({
-    //                     ...msg,
-    //                     breedContext: breedId
-    //                 }));
-    //                 setMessages(prev => [...prev, ...newMessages]);
-    //             }
-    //         } catch (error) {
-    //             setError('Failed to load cat images. Please try again.');
-    //             console.error('Error loading breed images:', error);
-    //         } finally {
-    //             setIsLoading(false);
-    //         }
-    //     }
-    // };
-
     return (
         <ChatContainer>
             <BreedSelector
