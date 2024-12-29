@@ -7,4 +7,4 @@ router.post('/chat/message', chatController.sendMessage.bind(chatController));
 router.get('/cats/breeds', chatController.getBreeds.bind(chatController));
 router.post('/chat/stream', chatController.streamMessage.bind(chatController));
 
-module.exports = router; 
+module.exports = router;
